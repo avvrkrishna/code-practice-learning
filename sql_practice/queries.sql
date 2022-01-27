@@ -24,3 +24,12 @@ SELECT t.DEPARTMENT,t.FIRST_NAME,t.Salary from
 (SELECT max(Salary) as TotalSalary,DEPARTMENT from Worker group by DEPARTMENT) as TempNew 
 Inner Join Worker t on TempNew.DEPARTMENT=t.DEPARTMENT 
  and TempNew.TotalSalary=t.Salary;
+ 
+ /*SQL query to fetch three min salaries from a table*/
+ SELECT distinct Salary from worker a WHERE 3 >= (SELECT count(distinct Salary) from worker b WHERE a.Salary >= b.Salary) order by a.Salary desc;
+ 
+ /*SQL query to fetch three max salaries from a table*/
+ SELECT distinct Salary from worker a WHERE 3 >= (SELECT count(distinct Salary) from worker b WHERE a.Salary <= b.Salary) order by a.Salary desc;
+ 
+ /*SQL query to fetch the departments that have less than five people in it*/
+ SELECT DEPARTMENT, COUNT(WORKER_ID) as 'Number of Workers' FROM Worker GROUP BY DEPARTMENT HAVING COUNT(WORKER_ID) < 5;

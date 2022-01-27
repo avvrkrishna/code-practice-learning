@@ -51,3 +51,19 @@ Select * from Worker where FIRST_NAME like '%a';
 
 /*SQL query to print details of the Workers whose FIRST_NAME contains ‘a’*/
 Select * from Worker where FIRST_NAME like '%a%';
+
+/*SQL query to fetch the list of employees with the same salary*/
+Select distinct W.WORKER_ID, W.FIRST_NAME, W.Salary 
+from Worker W, Worker W1 
+where W.Salary = W1.Salary 
+and W.WORKER_ID != W1.WORKER_ID;
+
+/*SQL query to show one row twice in results from a table*/
+select FIRST_NAME, DEPARTMENT from worker W where W.DEPARTMENT='HR' 
+union all 
+select FIRST_NAME, DEPARTMENT from Worker W1 where W1.DEPARTMENT='HR';
+
+/*SQL query to fetch intersecting records of two tables*/
+(SELECT * FROM Worker)
+INTERSECT
+(SELECT * FROM WorkerClone);

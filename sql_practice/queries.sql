@@ -33,3 +33,21 @@ Inner Join Worker t on TempNew.DEPARTMENT=t.DEPARTMENT
  
  /*SQL query to fetch the departments that have less than five people in it*/
  SELECT DEPARTMENT, COUNT(WORKER_ID) as 'Number of Workers' FROM Worker GROUP BY DEPARTMENT HAVING COUNT(WORKER_ID) < 5;
+
+/*SQL query to fetch duplicate records having matching data in some fields of a table*/
+SELECT WORKER_TITLE, AFFECTED_FROM, COUNT(*)
+FROM Title
+GROUP BY WORKER_TITLE, AFFECTED_FROM
+HAVING COUNT(*) > 1;
+
+/*SQL query to show only odd rows from a table*/
+SELECT * FROM Worker WHERE MOD (WORKER_ID, 2) <> 0;
+
+/*SQL query to print details of the Workers whose FIRST_NAME ends with ‘h’ and contains six alphabets*/
+Select * from Worker where FIRST_NAME like '_____h';
+
+/*SQL query to print details of the Workers whose FIRST_NAME ends with ‘a’*/
+Select * from Worker where FIRST_NAME like '%a';
+
+/*SQL query to print details of the Workers whose FIRST_NAME contains ‘a’*/
+Select * from Worker where FIRST_NAME like '%a%';

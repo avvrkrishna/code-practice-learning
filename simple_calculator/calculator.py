@@ -1,15 +1,24 @@
 def add(P, Q):    
-   # This function is used for adding two numbers   
+   ''' 
+   This function is used for adding two numbers   
+   '''
    return P + Q   
 def subtract(P, Q):   
-   # This function is used for subtracting two numbers   
+   '''
+   This function is used for subtracting two numbers   
+   '''
    return P - Q   
 def multiply(P, Q):   
-   # This function is used for multiplying two numbers   
+   '''
+   This function is used for multiplying two numbers   
+   '''
    return P * Q   
 def divide(P, Q):   
-   # This function is used for dividing two numbers    
+   '''
+   This function is used for dividing two numbers    
+   '''
    return P / Q    
+
 # Now we will take inputs from the user    
 print ("Please select the operation.")    
 print ("a. Add")    

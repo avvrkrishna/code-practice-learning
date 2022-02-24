@@ -1,6 +1,7 @@
-# Function to calculate x raised to 
-# the power y
 def power(x, y):
+      '''
+      Function to calculate x raised to the power y
+      '''
       
     if y == 0:
         return 1
@@ -9,8 +10,10 @@ def power(x, y):
           
     return x * power(x, y // 2) * power(x, y // 2)
   
-# Function to calculate order of the number
 def order(x):
+      '''
+      Function to calculate order of the number
+      '''
   
     # Variable to store of the number
     n = 0
@@ -20,9 +23,10 @@ def order(x):
           
     return n
   
-# Function to check whether the given 
-# number is Armstrong number or not
 def isArmstrong(x):
+      '''
+      Function to check whether the given number is Armstrong number or not
+      '''
       
     n = order(x)
     temp = x

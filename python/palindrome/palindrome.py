@@ -1,4 +1,8 @@
 def isPalindrome(s):
+    '''
+    Palindrome Function to check whether given string is Palindrome or not
+    '''
+    
     return s == s[::-1]
  
 # Sample Input & Output

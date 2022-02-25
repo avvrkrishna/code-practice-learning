@@ -2,4 +2,4 @@
 ### Sample Input and Output
 - Input: 
 - x = 153
-  print(isArmstrong(x))
+- print(isArmstrong(x))

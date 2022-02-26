@@ -4,4 +4,4 @@
 - x = 153
 - print(isArmstrong(x))
 - Output:
-- Yes
+- True

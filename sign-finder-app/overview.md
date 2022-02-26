@@ -3,4 +3,4 @@
 
 URL: https://sign-finder-app.herokuapp.com/
 
-- Open the URL and enter positive and negative numbers to see the response
+- Open the URL and enter positive or negative numbers to see the response

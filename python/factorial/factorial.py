@@ -15,10 +15,7 @@ def factorial(num):
       factorial = factorial*i
     print("The factorial of",num,"is",factorial)
     
-# change the value for a different result
-num = 7
-
 # To take input from the user
-#num = int(input("Enter a number: "))
+num = int(input("Enter a number: "))
 
 factorial(num)

@@ -10,3 +10,5 @@ def extension_finder():
         print(file)
         
 extension_finder(my_directory)
+
+

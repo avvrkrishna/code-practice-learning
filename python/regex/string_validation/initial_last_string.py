@@ -1,6 +1,6 @@
 from re import compile
 
-regularExpression = ''
+regularExpression = r'^(.).*\1$'
 
 pattern = compile(regularExpression)
 
